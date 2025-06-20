@@ -1,0 +1,75 @@
+(8) What is the significance of “%” and “_” operators in the LIKE statement? 
+    "%" means it Matches zero or more characters and Useful when you're not sure how many characters will appear in a certain position.
+    "_" means it Matches exactly one character and  Useful when you want to match a specific character count or position.
+
+
+
+(9) Explain normalization in the context of databases. 
+    Normalization in the context of databases is the process of organizing data to reduce redundancy and improve data integrity. 
+    It involves dividing large tables into smaller, related tables and defining relationships between them using primary and foreign keys.
+    Objectives of Normalization:
+				1.Eliminate redundant (duplicate) data
+				2.Ensure data dependencies make sense (data is stored logically)
+                3.Make the database more efficient for updates and queries
+	Benefits of Normalization:
+			    1.Avoids anomalies in insert, update, and delete operations
+				2.Saves storage space
+                3.Improves data consistency and accuracy
+
+
+
+(10) What does a join in MySQL mean? 
+       A JOIN in MySQL is used to combine rows from two or more tables based on a related column between them.
+       Purpose of JOIN:
+                      To retrieve related data stored across multiple tables in a single query result.
+     there are     types of join:
+     1.INNER JOIN
+     Returns only matching rows from both tables.
+     2.LEFT JOIN (or LEFT OUTER JOIN)
+     Returns all rows from the left table, and matched rows from the right table.
+     If there's no match, NULLs are shown for the right table's columns.
+     3. RIGHT JOIN (or RIGHT OUTER JOIN)
+     Opposite of LEFT JOIN: returns all rows from the right table, matched with the left.
+     4. FULL JOIN (Not supported natively in MySQL)
+     Combines LEFT and RIGHT JOIN results.
+
+
+
+(11)What do you understand about DDL, DCL, and DML in MySQL? 
+      1. DDL – Data Definition Language
+			DDL commands are used to define and modify the structure of database objects like tables, schemas, and indexes.
+      Common DDL Commands:
+			CREATE – Creates new tables or databases
+            ALTER – Modifies the structure of a table
+		    DROP – Deletes tables or databases
+            TRUNCATE – Removes all records from a table quickly (but keeps the structure)
+            RENAME – Renames a table
+	 2. DML – Data Manipulation Language
+             DML commands are used to work with the data stored in tables (insert, retrieve, update, or delete).
+	 Common DML Commands:
+			SELECT – Retrieves data
+            INSERT – Adds new data
+            UPDATE – Modifies existing data
+            DELETE – Removes data
+	3. DCL – Data Control Language
+		   DCL commands are used to control access and permissions in the database.
+    Common DCL Commands:
+			GRANT – Gives a user permission
+            REVOKE – Removes a user’s permission
+
+
+
+
+(12)What is the role of the MySQL JOIN clause in a query, and what are some
+common types of joins? 
+The JOIN clause in MySQL is used to combine rows from two or more tables based on a related column between them. It helps in retrieving related data that is stored in separate tables — a key feature of relational databases.
+use of joins:
+           To avoid data duplication by splitting data into related tables
+		   To fetch meaningful combined information from multiple tables
+           To maintain normalized database structure while still accessing full data
+Common Types of JOINs in MySQL:
+  1. INNER JOIN
+  2.left join
+  3.right join
+  4.full joIn
+ 

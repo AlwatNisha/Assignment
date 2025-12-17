@@ -1,0 +1,179 @@
+1) What is Power BI and how does it differ from Excel? 
+	Power BI is a business intelligence (BI) and data visualization tool by Microsoft.
+	it is used to :
+		Connect to multiple data sources (databases, APIs, Excel, cloud apps)
+		Clean and transform data  
+		Build interactive dashboards and reports 
+		Share reports securely online or within an organization
+Power BI is mainly used for data analysis, reporting, and decision-making at scale.
+
+The main difference between Power BI and Excel lies in their purpose and scale of use. Excel is primarily a spreadsheet tool used for data entry, calculations, and basic analysis, and it works best with small to medium-sized datasets. Power BI, on the other hand, is built specifically for advanced analytics and can efficiently handle millions of rows of data. While Excel focuses on formulas and manual analysis, Power BI uses tools like Power Query and DAX to create dynamic, automated, and interactive dashboards.
+
+Excel is mostly file-based for sharing, whereas Power BI allows secure online sharing, scheduled data refreshes, and collaboration across organizations. In short, Excel is ideal for individual and ad-hoc analysis, while Power BI is better suited for enterprise-level reporting and business intelligence.
+
+
+2) Explain the concept of data modeling in Power BI. 
+	Data modeling in Power BI is the process of organizing, structuring, and connecting data from different sources so that it can be analyzed efficiently and accurately. After data is loaded into Power BI, data modeling defines how tables relate to each other, how calculations are performed, and how data flows across the model. A well-designed data model makes reports faster, easier to understand, and more reliable. Data modeling mainly involves creating relationships between tables using common fields such as IDs or keys. It also includes creating calculated columns and measures using DAX (Data Analysis Expressions) to perform aggregations such as totals, averages, and percentages.
+
+
+
+3) What are the different types of connections available in Power BI? 
+	In Power BI, connections define how Power BI connects to data sources. The main types of connections are:
+
+		Import: Power BI copies data from the source into its own storage. This gives fast performance and full features.
+		Direct Query: Power BI does not store the data. It sends queries directly to the data source whenever you use a report, so data is always up to date, but performance depends on the source.
+		Live Connection: Power BI connects live to models like SSAS, Azure Analysis Services, or Power BI datasets. The data stays in the source, and modeling is done there.
+		Composite Model: A mix of Import and Direct Query in the same report. Some tables are imported for speed, while others stay live for real-time data.
+
+
+
+4) How do you handle data transformation in Power BI? 
+	data transformation is handled mainly using Power Query Editor. It is used to clean, shape, and prepare data before loading it into reports.
+
+
+
+5) What is DAX (Data Analysis Expressions) and why is it important in Power BI? 
+	DAX (Data Analysis Expressions) is a formula language used in Power BI to create calculations and perform data analysis. It is used to build measures, calculated columns, and calculated tables that help analyze data beyond what is available in the original dataset.
+
+DAX is important in Power BI because it allows you to calculate totals, averages, percentages, rankings, and time-based calculations like year-to-date or month-to-date. It works with relationships between tables and understands filters applied in reports, which means calculations automatically change when users interact with visuals.
+
+
+
+6) Can you explain the difference between calculated columns and measures in Power BI? 
+	A calculated column is calculated row by row and stored in the table. Its value is fixed once calculated and only changes when the data is refreshed. Calculated columns are mainly used for creating new fields, such as category labels, flags, or logic that needs to be used in slicers, filters, or relationships.
+
+A measure is calculated on the fly based on the filters and slicers applied in a report. It is not stored in the table and only shows a result when used in a visual. Measures are mainly used for aggregations like total sales, average profit, percentages, and time intelligence calculations.
+
+
+
+
+7) How do you handle relationships between tables in Power BI?
+	In Power BI, relationships between tables are handled using the Model view, where you connect tables based on common columns (keys) ,setting the correct cardinality and filter direction, so data flows properly between tables and reports show accurate results.
+
+
+
+8) What is the purpose of a Power BI Gateway?
+	The Power BI Gateway is used to securely connect Power BI Service (online) with on-premises data sources, such as SQL Server, Excel files, or other local databases.
+
+Its main purpose is to allow data refresh and live queries without moving the data to the cloud. The gateway acts as a bridge between Power BI Service and local data, ensuring data stays secure behind it's firewall. It is especially useful for scheduled refresh, DirectQuery, and Live Connection scenarios.
+
+
+
+9) How can you schedule data refresh in Power BI Service?
+	In Power BI Service, we schedule data refresh by going to the dataset settings, enabling Scheduled refresh, choosing the refresh frequency and time, and configuring a Power BI Gateway if the data source is on-premises. This keeps your reports updated automatically.	
+
+
+
+
+10) Explain the concept of row-level security in Power BI.
+	Row-Level Security (RLS) in Power BI is used to control which rows of data a user can see in a report. It works by creating roles with DAX filters that limit data based on user attributes, such as region or department. When users view the report, Power BI only shows the data allowed for their role, ensuring data privacy and security within the same report.
+
+
+
+11) What is the Power BI Desktop and how does it differ from Power BI Service? 
+	Power BI Desktop is a free application used to connect to data, transform data, create models, and build reports on your computer. It is mainly used for report development.
+Power BI Service is the online (cloud) platform used to publish, share, and collaborate on reports and dashboards. It also supports scheduled refresh, sharing, and access control.
+In short, Desktop is for creating reports, while Service is for publishing, sharing, and managing them online.
+
+
+
+12) Explain the concept of Direct Query in Power BI. 
+	Direct Query in Power BI is a connection mode where data is not stored inside Power BI. Instead, Power BI sends queries directly to the source database each time we interact with a report. Direct Query is commonly used when working with large datasets or when real-time data is required.
+
+
+
+13) What are Power BI templates and how are they useful? 
+	Power BI templates are reusable Power BI files saved with the .pbit extension. They contain report layouts, visuals, data models, relationships, and DAX measures, but no actual data.
+
+They are useful because they allow you to reuse standard report designs, maintain consistent formatting and calculations, and quickly create new reports by connecting the template to different datasets. This saves time and ensures consistency across multiple reports.
+
+
+
+14) How do you handle incremental data refresh in Power BI? 
+	In Power BI, incremental data refresh is used to refresh only new or changed data instead of reloading the entire dataset, which improves performance and reduces refresh time.
+
+You handle incremental refresh by creating date/time parameters (for example, RangeStart and RangeEnd) in Power BI Desktop, then filtering the table using these parameters in Power Query. After that, you enable Incremental Refresh in the dataset settings and define how much historical data to store and how often recent data should be refreshed.
+
+
+
+
+
+15) What is the role of Power Query in Power BI? 
+	Power Query in Power BI is used for data extraction, cleaning, and transformation before the data is loaded into the model. Its role is to connect to different data sources and prepare data by removing unwanted rows or columns, changing data types, merging or splitting columns, handling missing values, and shaping the data into the right format. All transformation steps are saved and automatically applied whenever the data is refreshed.
+
+
+
+16) Explain the difference between calculated columns and calculated tables in Power BI. 
+	A calculated column is added to an existing table and is calculated row by row. Its values are stored in the model and are mainly used for creating new fields such as flags, categories, or logic that can be used in filters, slicers, and relationships.
+	A calculated table creates an entire new table based on a DAX expression. It is calculated during data refresh and stored in the model. Calculated tables are commonly used to create summary tables, date tables, or reference tables needed for relationships and analysis.
+	In short, calculated columns add new columns to a table, while calculated tables create a completely new table in the data model.
+
+
+
+
+17) How do you create custom visuals in Power BI?
+	You can create custom visuals in two main ways. First, you can import custom visuals from AppSource, where Microsoft and third-party developers provide ready-made visuals. You simply download and add them to your report.
+
+Second, you can build your own custom visual using the Power BI Visuals SDK, which is based on TypeScript, HTML, and CSS.
+
+
+
+
+18) What are the best practices for optimizing performance in Power BI? 
+	Use Import mode when possible instead of Direct Query for faster report performance.
+	Clean and reduce data in Power Query (remove unused columns and rows before loading).
+	Design a star schema with fact and dimension tables to improve model efficiency.
+	Use measures instead of calculated columns for aggregations to reduce memory usage.
+	Avoid complex DAX and use efficient functions; keep calculations simple.
+	Limit visuals on a page and avoid unnecessary interactions between visuals.
+	Use proper data types and reduce high-cardinality columns (like IDs) in visuals.
+	Enable incremental refresh for large datasets to reduce refresh time.
+
+
+
+
+19) How can you integrate Power BI with other Microsoft products like Azure and Office 365? 
+	With Azure, Power BI can connect to services like Azure SQL Database, Azure Synapse Analytics, Azure Data Lake, and Azure Analysis Services to analyze large and cloud-based data. It also works with Azure Active Directory for secure user authentication and role-based access.
+
+With Office 365, Power BI integrates with Excel, SharePoint, OneDrive, and Microsoft Teams. You can import Excel files, publish reports to SharePoint or Teams, and share dashboards directly with users. This integration allows teams to collaborate, view insights, and make decisions using familiar Microsoft tools.
+
+
+
+
+20) Explain the concept of aggregations in Power BI. 
+	In Power BI, aggregations are used to summarize large amounts of data so reports run faster and more efficiently.
+
+Instead of always querying detailed data, Power BI stores pre-summarized data (such as total sales by date, product, or region). When a user views a report, Power BI first checks the aggregation table. If the required data is available there, it uses it instead of scanning the full detailed table. If not, it falls back to the detailed data.
+
+Aggregations are especially useful with large datasets and Direct Query models, as they improve performance while still allowing detailed analysis when needed.
+
+
+
+21) How do you handle error handling and data quality in Power BI? 
+	In Power BI, you handle errors and data quality mainly in Power Query and with DAX:
+
+In Power Query:
+	By Removing or fix rows with errors.
+	By Fill or replace missing values.
+	By Make sure columns have the correct data type.
+	By Using simple if-else rules to handle unexpected values.
+
+In DAX:
+	By Using functions like IFERROR or COALESCE to avoid calculation errors.
+	By Creating checks to find wrong or unusual data, like negative sales.
+
+
+
+
+22) What is the purpose of Power BI Embedded and when would you use it? 
+	Power BI Embedded is a service that lets you embed Power BI reports and dashboards into your own applications or websites. Users can view and interact with the reports without needing a Power BI account.
+	You would use Power BI Embedded when you want to:
+	Provide analytics inside a custom app for your customers or employees.
+	Offer interactive reports without sending users to the Power BI Service.
+	Control branding, access, and user experience within your application.
+In short, it’s useful for developers who want to integrate powerful Power BI visuals into their own software.
+
+
+
+
+ 
